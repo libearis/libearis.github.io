@@ -2,14 +2,14 @@ export const GITHUB_USER = "libearis";
 
 // Order is the ranking: the first project is shown full-width as the flagship.
 
-// `pages: true` enables the "Live demo" option once GitHub Pages is on for that repo.
+// `demo` is a short screen recording (in public/demos/) shown in a popup from the "Get code" menu.
 // `summary` supports <strong> for emphasis (trusted, hand-written content only).
 export const projects = [
   {
     repo: "Gentongku",
     name: "Gentongku",
     branch: "main",
-    pages: false,
+    demo: { video: "/demos/gentongku.mp4", poster: "/demos/gentongku.jpg", seconds: 32 },
     icon: "bag",
     accent: "var(--c-dotnet)",
     language: { name: "C#", color: "#178600" },
@@ -23,7 +23,7 @@ export const projects = [
     repo: "Taskflow",
     name: "TaskFlow",
     branch: "main",
-    pages: false,
+    demo: { video: "/demos/taskflow.mp4", poster: "/demos/taskflow.jpg", seconds: 16 },
     icon: "board",
     accent: "var(--c-python)",
     language: { name: "Python", color: "#3572A5" },
@@ -37,7 +37,7 @@ export const projects = [
     repo: "Attendance",
     name: "Attendance",
     branch: "main",
-    pages: false,
+    demo: { video: "/demos/attendance.mp4", poster: "/demos/attendance.jpg", seconds: 29 },
     icon: "calendar",
     accent: "var(--c-ts)",
     language: { name: "TypeScript", color: "#3178c6" },

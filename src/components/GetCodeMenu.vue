@@ -3,6 +3,7 @@ import { computed, ref, onMounted, onBeforeUnmount } from "vue";
 import BaseIcon from "./BaseIcon.vue";
 import { GITHUB_USER } from "../data/projects.js";
 import { useToast } from "../composables/useToast.js";
+import { useDemo } from "../composables/useDemo.js";
 
 const props = defineProps({
   project: { type: Object, required: true },
@@ -11,6 +12,12 @@ const props = defineProps({
 const open = ref(false);
 const root = ref(null);
 const toast = useToast();
+const demo = useDemo();
+
+function watchDemo() {
+  open.value = false;
+  demo.show(props.project);
+}
 
 const links = computed(() => {
   const { repo, branch } = props.project;
@@ -19,7 +26,6 @@ const links = computed(() => {
     repo: repoUrl,
     zip: `${repoUrl}/archive/refs/heads/${branch}.zip`,
     clone: `${repoUrl}.git`,
-    pages: `https://${GITHUB_USER}.github.io/${repo}/`,
   };
 });
 
@@ -75,17 +81,10 @@ onBeforeUnmount(() => {
         <span class="mi-icon"><BaseIcon name="copy" /></span>
         <span><b>Copy git clone URL</b><small>{{ links.clone }}</small></span>
       </button>
-      <a
-        v-if="project.pages"
-        class="menu-item" role="menuitem" :href="links.pages" target="_blank" rel="noopener"
-      >
-        <span class="mi-icon"><BaseIcon name="globe" /></span>
-        <span><b>Live demo</b><small>{{ links.pages.replace("https://", "") }}</small></span>
-      </a>
-      <div v-else class="menu-item disabled" aria-disabled="true">
-        <span class="mi-icon"><BaseIcon name="globe" /></span>
-        <span><b>Live demo</b><small>Full-stack app: run it locally with Docker</small></span>
-      </div>
+      <button v-if="project.demo" class="menu-item" role="menuitem" @click="watchDemo">
+        <span class="mi-icon"><BaseIcon name="play" /></span>
+        <span><b>Watch demo</b><small>{{ project.demo.seconds }}-second screen recording</small></span>
+      </button>
     </div>
   </div>
 </template>

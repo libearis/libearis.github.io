@@ -6,6 +6,7 @@ import ProjectsSection from "./components/ProjectsSection.vue";
 import IntegrationSection from "./components/IntegrationSection.vue";
 import ContactSection from "./components/ContactSection.vue";
 import ToastMessage from "./components/ToastMessage.vue";
+import DemoModal from "./components/DemoModal.vue";
 
 const year = new Date().getFullYear();
 </script>
@@ -27,4 +28,5 @@ const year = new Date().getFullYear();
   </footer>
 
   <ToastMessage />
+  <DemoModal />
 </template>

@@ -26,6 +26,8 @@ defineProps({
     <template v-else-if="name === 'moon'"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" /></template>
     <template v-else-if="name === 'bag'"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></template>
     <template v-else-if="name === 'board'"><rect x="3" y="3" width="7" height="9" rx="1.5" /><rect x="14" y="3" width="7" height="5" rx="1.5" /><rect x="14" y="12" width="7" height="9" rx="1.5" /><rect x="3" y="16" width="7" height="5" rx="1.5" /></template>
+    <template v-else-if="name === 'play'"><circle cx="12" cy="12" r="10" /><path d="m10 8 6 4-6 4z" /></template>
+    <template v-else-if="name === 'x'"><path d="M18 6 6 18M6 6l12 12" /></template>
     <template v-else-if="name === 'arrow-left'"><path d="M19 12H5M12 19l-7-7 7-7" /></template>
     <template v-else-if="name === 'arrow-right'"><path d="M5 12h14M12 5l7 7-7 7" /></template>
     <template v-else-if="name === 'mail'"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-10 6L2 7" /></template>

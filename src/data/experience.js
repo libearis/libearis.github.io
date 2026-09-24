@@ -76,7 +76,7 @@ export const slides = [
       { name: "Languages", items: ["C#", "Go", "Java", "Python", "TypeScript", "Bash"] },
       { name: "Backend", items: ["ASP.NET Core", "Gin", "Spring Boot", "FastAPI", "NestJS"] },
       { name: "Frontend", items: ["Vue.js", "Angular", "React", "Pinia", "Signals"] },
-      { name: "Data", items: ["PostgreSQL", "SQL Server", "MongoDB", "MySQL", "Redis", "EF Core", "GORM"] },
+      { name: "Data", items: ["PostgreSQL", "SQL Server", "MongoDB", "MySQL", "Redis", "EF Core", "GORM", "SQLAlchemy"] },
       { name: "Messaging and jobs", items: ["RabbitMQ", "gRPC", "Hangfire", "Serilog", "NLog"] },
       { name: "Infra and tools", items: ["YARP (API gateway)", "Docker", "CI/CD", "Rancher", "GitHub", "GitLab", "SSH"] },
     ],
