@@ -142,6 +142,12 @@ code {
   letter-spacing: -0.02em; line-height: 1.2;
 }
 .muted { color: var(--muted); margin-top: 10px; }
+.footnote {
+  margin-top: 14px; padding-left: 12px;
+  border-left: 2px solid var(--border-strong);
+  font-size: 0.8rem; line-height: 1.55; font-style: italic;
+  color: var(--muted);
+}
 
 /* ---------- Project cards ---------- */
 .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }

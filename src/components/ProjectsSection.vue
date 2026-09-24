@@ -9,6 +9,12 @@ import { projects } from "../data/projects.js";
       <p class="kicker">02 — Projects</p>
       <h2>Selected work</h2>
       <p class="muted">Ranked by complexity and scope. Each one exists to show an architectural idea well.</p>
+      <p class="footnote">
+        * These are small, representative snippets of what I've worked on over 3 years, built for
+        showcase purposes only and not production-ready. The architecture in each one is a deliberate
+        demonstration, not the most practical choice: every one of these apps could run perfectly well
+        as a simple monolith.
+      </p>
     </div>
 
     <!-- The first project in the list is shown full-width as the flagship. -->
