@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import BaseIcon from "./BaseIcon.vue";
 
-const theme = ref(document.documentElement.dataset.theme || "dark");
+const theme = ref(document.documentElement.dataset.theme || "light");
 
 function toggleTheme() {
   theme.value = theme.value === "light" ? "dark" : "light";
@@ -15,10 +15,10 @@ function toggleTheme() {
   <header class="nav">
     <div class="container nav-inner">
       <a href="#top" class="brand">
-        <img src="https://avatars.githubusercontent.com/u/107662488?v=4" alt="" />
-        <span>libearis</span>
+        <span>Danny Liven</span>
       </a>
       <nav class="nav-links">
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#integration">Integration</a>
         <a href="#contact">Contact</a>

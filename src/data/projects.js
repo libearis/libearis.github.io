@@ -1,5 +1,7 @@
 export const GITHUB_USER = "libearis";
 
+// Order is the ranking: the first project is shown full-width as the flagship.
+
 // `pages: true` enables the "Live demo" option once GitHub Pages is on for that repo.
 // `summary` supports <strong> for emphasis (trusted, hand-written content only).
 export const projects = [
@@ -11,7 +13,7 @@ export const projects = [
     icon: "bag",
     accent: "var(--c-dotnet)",
     language: { name: "C#", color: "#178600" },
-    tagline: "E-commerce as a testbed for a .NET modular monolith.",
+    tagline: "An e-commerce app built to showcase a .NET modular monolith.",
     summary:
       "A storefront (buyer, seller, admin) that deliberately stays simple so its three showcase features have a real app to live in: a Clean Architecture <strong>modular monolith</strong> with per-module Postgres schemas, a live <strong>Benchmark</strong> tool that compares cache, index and query strategies, and a Hangfire <strong>Scheduler</strong> that generates dummy data on demand.",
     tags: [".NET 10", "Angular", "PostgreSQL", "Redis", "Hangfire", "Seq", "gRPC client"],
@@ -39,15 +41,10 @@ export const projects = [
     icon: "calendar",
     accent: "var(--c-ts)",
     language: { name: "TypeScript", color: "#3178c6" },
-    tagline: "WFH attendance and employee monitoring for HR.",
+    tagline: "A simple microservices app for WFH attendance and HR monitoring.",
     summary:
       "Two independent <strong>NestJS services</strong> (attendance and monitoring) and a React frontend. Employees check in and out with photo (EXIF) validation, and HRD admins get a dashboard for monitoring. The services never call each other: each <strong>owns its own database</strong> and reads the other's through a <strong>read-only connection</strong>, so check-in keeps working even if monitoring is down.",
     tags: ["NestJS", "React", "TypeORM", "MySQL 8", "JWT"],
     badge: { text: "Standalone", linked: false },
   },
-];
-
-export const stack = [
-  ".NET", "Angular", "Python · FastAPI", "Vue 3", "NestJS", "React",
-  "PostgreSQL", "MongoDB", "MySQL", "Redis", "gRPC", "Docker",
 ];

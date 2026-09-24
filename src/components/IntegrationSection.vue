@@ -18,7 +18,7 @@ const points = [
 <template>
   <section id="integration" class="section container">
     <div v-reveal class="section-head">
-      <p class="kicker">02 — Integration</p>
+      <p class="kicker">03 — Integration</p>
       <h2>When Gentongku breaks, TaskFlow gets a ticket</h2>
       <p class="muted">
         Two separate apps in two languages, connected by a single unary gRPC call.

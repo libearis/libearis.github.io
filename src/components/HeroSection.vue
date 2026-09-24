@@ -1,30 +1,31 @@
 <script setup>
 import BaseIcon from "./BaseIcon.vue";
-import { stack } from "../data/projects.js";
+import { CV_URL } from "../data/contact.js";
 </script>
 
 <template>
   <section class="hero container">
-    <p v-reveal class="eyebrow"><span class="dot"></span> Available for collaboration</p>
+    <img v-reveal class="hero-avatar" src="/avatar.jpg" alt="Danny Liven" />
+    <p v-reveal class="eyebrow"><span class="dot"></span> Open to new opportunities</p>
     <h1 v-reveal="1">
       Building systems where<br />
       <span class="gradient-text">architecture is a choice,</span><br />
       not a default.
     </h1>
     <p v-reveal="2" class="lead">
-      Hi, I'm <strong>libearis</strong>, a software engineer who likes backend-heavy work:
-      modular monoliths, CQRS, the Outbox pattern, and gRPC used only where it actually fits.
-      Below are three projects, including two that talk to each other.
+      Hi, I'm <strong>Danny Liven</strong>, a software engineer with <strong>3 years of experience</strong>.
+      I'm backend-focused, with <strong>.NET</strong> as my main expertise, and comfortable across the full
+      stack with Vue and Angular. I care about picking the right architecture for the job, from
+      microservices to modular monoliths with Clean Architecture.
     </p>
     <div v-reveal="3" class="hero-cta">
       <a href="#projects" class="btn btn-primary">See projects <BaseIcon name="arrow-down" /></a>
+      <a :href="CV_URL" target="_blank" rel="noopener" class="btn btn-ghost">
+        <BaseIcon name="file-text" /> View CV
+      </a>
       <a href="https://github.com/libearis" target="_blank" rel="noopener" class="btn btn-ghost">
-        <BaseIcon name="github" /> github.com/libearis
+        <BaseIcon name="github" /> GitHub
       </a>
     </div>
-
-    <ul v-reveal="3" class="stack-strip" aria-label="Technologies">
-      <li v-for="tech in stack" :key="tech">{{ tech }}</li>
-    </ul>
   </section>
 </template>
